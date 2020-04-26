@@ -1,3 +1,10 @@
+import VueRouter from 'vue-router';
+import HeaderComponent from "./components/HeaderComponent";
+
+import TaskListComponent from "./components/task/TaskListComponent";
+
+import cashListComponent from "./components/cash/list/cash_list";
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -20,6 +27,27 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('header-component', HeaderComponent);
+
+Vue.use(VueRouter);
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            // 初回練習用 @url https://qiita.com/minato-naka/items/9241d9c7a7433985056d
+            path: '/view/task',
+            name: 'task.list',
+            component: TaskListComponent
+        },
+        {
+            // 家計簿一覧
+            path: '/view/cash/list',
+            name: 'cash.list',
+            component: cashListComponent,
+            props: true
+        },
+    ]
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +57,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    router,
 });
