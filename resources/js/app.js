@@ -3,7 +3,7 @@ import HeaderComponent from "./components/HeaderComponent";
 
 import TaskListComponent from "./components/task/TaskListComponent";
 
-import cashListComponent from "./components/cash/list/cash_list";
+import cashListComponent from "./components/cash/list/cashListComponent";
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -43,8 +43,7 @@ const router = new VueRouter({
             // 家計簿一覧
             path: '/view/cash/list',
             name: 'cash.list',
-            component: cashListComponent,
-            props: true
+            component: cashListComponent
         },
     ]
 });

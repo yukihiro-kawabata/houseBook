@@ -5,11 +5,15 @@
         </li>
     </ul>
 
-    <ul id="sum_kamoku_list_share" class="list-group list-group-flush">
+    <!-- <ul id="sum_kamoku_list_share" class="list-group list-group-flush">
         <li class="list-group-item">
             家賃
             <span class="badge badge-danger float-right">112,000</span>    
         </li>
-    </ul>
+    </ul> -->
 
 </template>
+
+<script>
+export default {}
+</script>
