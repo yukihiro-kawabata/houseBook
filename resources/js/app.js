@@ -41,9 +41,10 @@ const router = new VueRouter({
         },
         {
             // 家計簿一覧
-            path: '/view/cash/list',
+            path: '/view/cash/list/:date',
             name: 'cash.list',
-            component: cashListComponent
+            component: cashListComponent,
+            props: true
         },
     ]
 });

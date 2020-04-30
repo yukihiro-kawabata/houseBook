@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/../function.php';
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

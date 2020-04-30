@@ -29,8 +29,7 @@ $ chmod -R 777 storage
 $ chmod -R 777 bootstrap/cache
 
 $ php artisan migrate
-$ php artisan db:seed --class=testsTableSeeder
-$ php artisan db:seed --class=itemsTableSeeder
+$ php artisan db:seed # テストデータ挿入
 
 # ビルド実行
 $ npm run dev
